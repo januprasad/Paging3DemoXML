@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="160dp">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <TextView
-        android:textSize="20sp"
-        android:text=""
-        android:id="@+id/quote"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp" />
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@drawable/item_quote_layout_bg"
+        android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#CCC"/>
+        <TextView
+            android:id="@+id/quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Something"
+            android:fontFamily="@font/subtitle_font"
+            android:textColor="@color/blueish_600"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/author"
+            android:textColor="@color/blueish_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/main_font"
+            android:text="Someone"
+            android:gravity="right"
+            android:paddingTop="4dp"
+            android:textSize="12sp" />
+    </LinearLayout>
 
 </LinearLayout>

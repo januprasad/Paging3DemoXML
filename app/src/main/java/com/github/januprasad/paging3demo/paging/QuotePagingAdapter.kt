@@ -15,12 +15,14 @@ class QuotePagingAdapter :
 
     class QuoteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val quote = itemView.findViewById<TextView>(R.id.quote)
+        val author = itemView.findViewById<TextView>(R.id.author)
     }
 
     override fun onBindViewHolder(holder: QuoteViewHolder, position: Int) {
         val item = getItem(position)
         if (item != null) {
             holder.quote.text = item.quote
+            holder.author.text = item.author
         }
     }
 
